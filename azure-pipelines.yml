@@ -73,7 +73,7 @@ stages:
 # separate repo for each commit
     - script: |
         echo "Checking out the $(branchName) branch"
-        databricks repos update --path $(STAGING_DIRECTORY) --branch "$(branchName)"
+        databricks repos update --repo-id $(STAGING_REPO_ID) --branch "$(branchName)"
       env:
         DATABRICKS_HOST: $(DATABRICKS_HOST)
         DATABRICKS_TOKEN: $(DATABRICKS_TOKEN)
