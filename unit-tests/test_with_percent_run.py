@@ -14,7 +14,7 @@ class TestPercentRunFixture(NutterFixture):
     cols = ["col1", "col2", "col3"]
     df = spark.createDataFrame([("abc", "cef", 1)], cols)
     expected_df = spark.createDataFrame([("abc", "cef", 1)], cols)
-    assert_df_equality(upper_df, expected_df)
+    assert_df_equality(df, expected_df)
 
 # COMMAND ----------
 
